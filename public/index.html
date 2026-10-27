@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Hesapay Loans - د پور محاسب</title>
+    <title>Hesapay د پورونه - د پور محاسب</title>
 
     <!-- ✅ Telegram SDK -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
@@ -11,7 +11,7 @@
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            background-color: #f1f3f5;
+            background-color: #f4f6f9;
             margin: 0;
             padding: 0;
             display: flex;
@@ -21,7 +21,7 @@
 
         .app-header {
             width: 100%;
-            background: linear-gradient(to bottom, #82d13d, #a3e635);
+            background: linear-gradient(135deg, #0052cc, #2684ff);
             padding: 20px 20px 40px;
             color: white;
             font-size: 24px;
@@ -38,20 +38,20 @@
             margin-top: -25px;
             padding: 30px 20px;
             border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 20px rgba(0,82,204,0.1);
             box-sizing: border-box;
         }
 
         h2 {
             font-size: 22px;
-            color: #333;
+            color: #1a202c;
             margin: 0 0 5px;
             text-align: center;
         }
 
         .subtext {
             font-size: 11px;
-            color: #888;
+            color: #718096;
             text-align: center;
             margin-bottom: 30px;
         }
@@ -63,14 +63,14 @@
             justify-content: space-between;
             font-weight: 500;
             font-size: 14px;
-            color: #444;
+            color: #2d3748;
         }
 
-        .green-text { color: #82d13d; font-weight: bold; }
+        .green-text { color: #0052cc; font-weight: bold; }
 
         input[type=range] {
             width: 100%;
-            accent-color: #82d13d;
+            accent-color: #0052cc;
             margin: 15px 0;
             height: 6px;
         }
@@ -79,12 +79,12 @@
             display: flex;
             justify-content: space-between;
             font-size: 11px;
-            color: #bbb;
+            color: #a0aec0;
         }
 
         .result-container {
-            background: #fafafa;
-            border: 1px solid #f0f0f0;
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
             border-radius: 12px;
             padding: 15px;
             text-align: center;
@@ -92,14 +92,14 @@
         }
 
         .result-value {
-            color: #82d13d;
+            color: #0052cc;
             font-size: 32px;
             font-weight: bold;
             margin: 0;
         }
 
         .btn-apply {
-            background: linear-gradient(to right, #82d13d, #95e14a);
+            background: linear-gradient(135deg, #0052cc, #2684ff);
             color: white;
             border: none;
             width: 100%;
@@ -108,12 +108,13 @@
             font-size: 18px;
             font-weight: bold;
             cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,82,204,0.2);
         }
 
         .footer {
             text-align: center;
             font-size: 11px;
-            color: #ccc;
+            color: #a0aec0;
             margin: 30px 0;
         }
     </style>
@@ -122,7 +123,7 @@
 <body>
 
 <div class="app-header">
-    <span>Hesapay Loans</span>
+    <span>Hesapay د پورونه</span>
     <span>☰</span>
 </div>
 
@@ -149,7 +150,7 @@
     </div>
 
     <div class="result-container">
-        <p style="margin:0; font-size:14px; color:#666">میاشتنی قسط</p>
+        <p style="margin:0; font-size:14px; color:#4a5568">میاشتنی قسط</p>
         <p id="monthly" class="result-value">AFN 983.33</p>
     </div>
 
