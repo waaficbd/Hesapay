@@ -1,7 +1,7 @@
 {
-  "name": "hesapay-loans",
+  "name": "hesabpay-loans",
   "version": "1.0.0",
-  "description": "Hesapay Afghanistan Loan Calculator",
+  "description": "محاسبه‌کننده قرضه‌ HesabPay افغانستان",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
