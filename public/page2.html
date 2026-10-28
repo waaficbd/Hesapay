@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ps" dir="rtl">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>د پور غوښتنه - لومړی پړاو</title>
+    <title>درخواست قرضه‌ - مرحله اول</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
     <style>
@@ -30,14 +30,14 @@
 <body>
 
 <div class="nav-header">
-    <div onclick="goBack()" style="cursor:pointer; font-size:16px;">← بیرته تګ</div>
-    <div class="waafi-logo">Hesapay</div>
+    <div onclick="goBack()" style="cursor:pointer; font-size:16px;">← برگشت</div>
+    <div class="waafi-logo">HesabPay</div>
     <div style="font-size: 22px;">☰</div>
 </div>
 
 <div class="form-card">
-    <h2>د پور غوښتنه</h2>
-    <p class="step-info">لومړی پړاو د 3 څخه</p>
+    <h2>درخواست قرضه‌</h2>
+    <p class="step-info">مرحله ۱ از ۳</p>
 
     <div class="progress-box">
         <div class="bar active-bar"></div>
@@ -46,38 +46,38 @@
     </div>
 
     <div class="input-wrap">
-        <label>د پور ډول</label>
+        <label>نوع قرضه‌</label>
         <select id="loanType">
-            <option value="شخصي پور" selected>شخصي پور</option>
-            <option value="سوداګریز پور">سوداګریز پور</option>
-            <option value="د موټر پور">د موټر پور</option>
-            <option value="د کور پور">د کور پور</option>
-            <option value="د زده کړې پور">د زده کړې پور</option>
+            <option value="قرضه شخصی" selected>قرضه شخصی</option>
+            <option value="قرضه تجارتی">قرضه تجارتی</option>
+            <option value="قرضه موتر">قرضه موتر</option>
+            <option value="قرضه مسکن">قرضه مسکن</option>
+            <option value="قرضه تحصیلی">قرضه تحصیلی</option>
         </select>
     </div>
 
     <div class="input-wrap">
-        <label>د پور مقدار (AFN)</label>
+        <label>مقدار قرضه‌ (AFN)</label>
         <input type="text" id="loanAmount" readonly style="background:#f7fafc">
     </div>
 
     <div class="input-wrap">
-        <label>د پور موده</label>
+        <label>مدت قرضه‌</label>
         <input type="text" id="loanDuration" readonly style="background:#f7fafc">
     </div>
 
     <div class="input-wrap">
-        <label>د پور اخیستلو موخه</label>
-        <textarea id="loanPurpose" rows="3" placeholder="تاسو به دا څنګه وکاروئ؟"></textarea>
+        <label>هدف از اخذ قرضه‌</label>
+        <textarea id="loanPurpose" rows="3" placeholder="شما از این مبلغ چگونه استفاده خواهید کرد؟"></textarea>
     </div>
 
     <div class="btn-container">
-        <button class="next-btn" onclick="goNext()">بل پړاو</button>
-        <button class="back-btn" onclick="goBack()">شا ته</button>
+        <button class="next-btn" onclick="goNext()">مرحله بعدی</button>
+        <button class="back-btn" onclick="goBack()">قبلی</button>
     </div>
 </div>
 
-<div class="footer-text">© 2026 Hesapay Afghanistan. ټولې حقونه خوندي دي.</div>
+<div class="footer-text">© 2026 HesabPay Afghanistan. تمامی حقوق محفوظ است.</div>
 
 <script>
     function goNext() {
@@ -92,7 +92,7 @@
         const type = typeEl.value;
 
         if (!purpose) {
-            alert("مهرباني وکړئ د پور موخه ولیکئ.");
+            alert("لطفاً هدف از اخذ قرضه‌ را یادداشت نمایید.");
             return;
         }
 
@@ -128,7 +128,7 @@
 
         if (amountEl && durationEl) {
             const storedAmt = localStorage.getItem('amount') || "10000";
-            const storedDur = localStorage.getItem('loanDuration') || "12 میاشتې";
+            const storedDur = localStorage.getItem('loanDuration') || "12 ماه";
             
             amountEl.value = `AFN ${Number(storedAmt).toLocaleString()}`;
             durationEl.value = storedDur;
