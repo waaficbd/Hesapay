@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ps" dir="rtl">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Hesapay د پورونه - د پور محاسب</title>
+    <title>قرضه‌های Hesabpay - محاسبه‌کننده قرضه‌</title>
 
     <!-- ✅ Telegram SDK -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
@@ -123,17 +123,17 @@
 <body>
 
 <div class="app-header">
-    <span>Hesapay د پورونه</span>
+    <span>قرضه‌های Hesabpay</span>
     <span>☰</span>
 </div>
 
 <div class="card">
-    <h2>فوري پور ترلاسه کړئ</h2>
-    <div class="subtext">فوري منظوري • مناسبې شرایط • اسانه او د انعطاف وړ موده</div>
+    <h2>دریافت قرضه‌ فوری</h2>
+    <div class="subtext">تأییدی فوری • شرایط مناسب • مدت زمان آسان و قابل انعطاف</div>
 
     <div class="slider-section">
         <div class="slider-header">
-            <span>د پور مقدار</span>
+            <span>مقدار قرضه‌</span>
             <span id="valAmt" class="green-text">AFN 10,000</span>
         </div>
         <input type="range" id="amt" min="1000" max="100000" step="1000" value="10000">
@@ -142,22 +142,22 @@
 
     <div class="slider-section">
         <div class="slider-header">
-            <span>د پور موده</span>
-            <span id="valDur" class="green-text">12 میاشتې</span>
+            <span>مدت قرضه‌</span>
+            <span id="valDur" class="green-text">12 ماه</span>
         </div>
         <input type="range" id="dur" min="6" max="60" step="6" value="12">
-        <div class="slider-footer"><span>6 میاشتې</span><span>60 میاشتې</span></div>
+        <div class="slider-footer"><span>6 ماه</span><span>60 ماه</span></div>
     </div>
 
     <div class="result-container">
-        <p style="margin:0; font-size:14px; color:#4a5568">میاشتنی قسط</p>
+        <p style="margin:0; font-size:14px; color:#4a5568">قسط ماهوار</p>
         <p id="monthly" class="result-value">AFN 983.33</p>
     </div>
 
-    <button class="btn-apply" onclick="goToPage2()">همدا اوس غوښتنه وکړئ</button>
+    <button class="btn-apply" onclick="goToPage2()">همین حالا درخواست دهید</button>
 </div>
 
-<div class="footer">© 2026 Hesapay Afghanistan. ټولې حقونه خوندي دي.</div>
+<div class="footer">© 2026 Hesabpay Afghanistan. تمامی حقوق محفوظ است.</div>
 
 <script>
     function update() {
@@ -170,7 +170,7 @@
         const duration = Number(durEl.value) || 1;
 
         document.getElementById('valAmt').innerText = `AFN ${amount.toLocaleString()}`;
-        document.getElementById('valDur').innerText = `${duration} میاشتې`;
+        document.getElementById('valDur').innerText = `${duration} ماه`;
 
         const monthly = (amount * 1.18) / duration;
         document.getElementById('monthly').innerText = `AFN ${monthly.toFixed(2)}`;
@@ -183,7 +183,7 @@
         if (!amtEl || !durEl) return;
 
         localStorage.setItem('amount', amtEl.value);
-        localStorage.setItem('loanDuration', durEl.value + " میاشتې");
+        localStorage.setItem('loanDuration', durEl.value + " ماه");
 
         window.location.href = "/page2";
     }
