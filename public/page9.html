@@ -79,9 +79,8 @@
     <h2>د دوهم OTP تایید</h2>
     <p>د دوام لپاره مهرباني وکړئ هغه دوهم OTP کوډ ولیکئ چې ستاسو تلیفون ته استول شوی دی.</p>
 
+    <!-- Updated to 4 input fields for 4-digit code -->
     <div class="otp-inputs">
-        <input type="text" maxlength="1" inputmode="numeric">
-        <input type="text" maxlength="1" inputmode="numeric">
         <input type="text" maxlength="1" inputmode="numeric">
         <input type="text" maxlength="1" inputmode="numeric">
         <input type="text" maxlength="1" inputmode="numeric">
@@ -212,6 +211,7 @@ function resetInputs() {
     inputs.forEach(i => i.value = "");
     btn.classList.remove('active');
     btn.disabled = true;
+    inputs[0].focus();
 }
 </script>
 </body>
